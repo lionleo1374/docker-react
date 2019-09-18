@@ -5,5 +5,5 @@ services:
 before_install:
   - docker build -t lionleo1374/docker-react -f Dockerfile.dev . 
 script:
-  - docker run -e CI=true [lionleo1374/docker-reac] npm run test
- # - docker run lionleo1374/docker-react npm run test -- --coverage
+ # - docker run -e CI=true [lionleo1374/docker-reac] npm run test
+  - docker run lionleo1374/docker-react npm run test -- --forceExit
